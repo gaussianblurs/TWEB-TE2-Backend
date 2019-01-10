@@ -147,7 +147,7 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
 })
 
 // Server
-const server = app.listen(8081, () => {
+const server = app.listen(process.env.PORT || 8081, () => {
 	const host = server.address().address
 	const port = server.address().port
 	console.log("Node server listening at http://%s:%s", host, port) // eslint-disable-line no-console
