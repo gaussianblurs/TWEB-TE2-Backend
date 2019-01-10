@@ -118,7 +118,6 @@ app.use((req, res, next) => {
 			}
 			req.decoded = decoded
 			next()
-			return null
 		})
 	} else {
 		return res.status(403).send({
@@ -126,7 +125,6 @@ app.use((req, res, next) => {
 			message: "No token provided."
 		})
 	}
-	return null
 })
 
 /********************************************
